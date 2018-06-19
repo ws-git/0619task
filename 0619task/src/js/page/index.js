@@ -6,7 +6,7 @@ define(['jquery', 'reder'], function($, reder) {
             reder('#tpl', data, '.list')
         },
         error: function(res) {
-            console.warn(res);
+
         }
     })
 });

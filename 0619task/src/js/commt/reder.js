@@ -3,7 +3,7 @@ define(['jquery', 'handlebars'], function($, handlebars) {
         //接受模板
         var tpl = $(element).html();
         //预编辑
-        var templat = handlebars.complice(tpl);
+        var templat = handlebars.compile(tpl);
         //接受json数据
         var html = templat(res);
         //输入模板

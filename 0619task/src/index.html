@@ -6,19 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./scss/index.css">
 </head>
 
 <body>
     <div class="wrap">
-        <h3>必买大牌</h3>
+        <footer>必买大牌</footer>
         <div class="main">
             <div class="lsit">
-
+                <ul>
+                    <li>
+                        <dl>
+                            <dt><img src="img/1.jpg" alt=""></dt>
+                            <dd>满300减70</dd>
+                        </dl>
+                    </li>
+                </ul>
             </div>
         </div>
         <footer></footer>
     </div>
-    <script id="tpl" type="text/x-handlebars-template"></script>
+    <script id="tpl" type="text/x-handlebars-template">
+        {{#each this}}
+        <li>
+            <dl>
+                <dt><img src="{{img}}" alt=""></dt>
+                <dd>{{title}}</dd>
+            </dl>
+        </li>
+        {{/each}}
+    </script>
     <script src="./js/libs/require.js"></script>
     <script>
         require(['./js/main.js'], function() {
