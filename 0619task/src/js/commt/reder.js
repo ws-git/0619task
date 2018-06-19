@@ -3,9 +3,10 @@ define(['jquery', 'handlebars'], function($, handlebars) {
         //接受模板
         var tpl = $(element).html();
         //预编辑
-        var templat = handlebars.compile(tpl);
+        var template = handlebars.compile(tpl);
         //接受json数据
-        var html = templat(res);
+        var html = template(res);
+        console.log(html);
         //输入模板
         $(cont).html(html);
     }

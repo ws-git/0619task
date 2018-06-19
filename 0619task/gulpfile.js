@@ -10,7 +10,15 @@ var url = require('url');
 
 var sass = require('gulp-sass');
 
+var cleancss = require('gulp-clean-css');
+
 var datajson = require('./data/data.json');
+
+gulp.task('sass', function() {
+    gulp.src('./src/scss/*.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('src/css'))
+})
 
 gulp.task('server', function() {
     gulp.src('src')
@@ -28,4 +36,6 @@ gulp.task('server', function() {
                 }
             }
         }))
-})
+});
+
+gulp.task('default', ['sass', 'server']);

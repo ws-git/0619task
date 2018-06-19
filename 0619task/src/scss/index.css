@@ -24,23 +24,23 @@ html {
   overflow-y: scroll;
 }
 
-.wrap .main .lsit ul {
+.wrap .main .list {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
-.wrap .main .lsit ul li {
+.wrap .main .list li {
   width: 33%;
   height: 150px;
   margin: 10px auto;
 }
 
-.wrap .main .lsit ul li dl dd {
+.wrap .main .list li dl dd {
   text-align: center;
 }
 
-.wrap .main .lsit ul li dl img {
+.wrap .main .list li dl img {
   width: 100%;
   height: 100%;
   display: block;
